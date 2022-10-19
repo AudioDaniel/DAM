@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <title>Local de Musica de Pontevedra</title>
+</head>
+<body>
+    <h1>Local de Música de Pontevedra</h1>
+<form>
+    Nome de usuario <br/>
+    <input type="text" name="nome" value="" required>
+    <br/>
+    Contrasinal
+    <br/>
+    <input type="password" name="pass" value=""/> <br/>
+    Data de nacemento
+    <br/>
+    <input type="date" />
+    <br/>
+    Engade un teléfono
+    <br>
+    <input type="tel" minlength="9" maxlength="9" />
+    <br>
+    <br>
+    En qué rol/roles estás interesado? 
+    <br>
+    <br/>
+    Usuario do Local
+    <input name="Usuariolocal" type="checkbox" /> <br/>
+    Administrar un grupo de Música 
+    <input name="admingrupo" type="checkbox" /> <br/>
+    Asistir a proxectos de formación
+    <input name="usuarioformacion" type="checkbox" /> <br/>
+    <br/>
+    Sexo:
+    <br/>
+    Masculino
+    <input type="radio" name="sexo" value="Masculino"/>
+    Feminino
+    <input type="radio" name="sexo" value="Feminino"/>
+    Outro
+    <input type="radio" name="sexo" value="Outro"/>
+    <br/>
+    <br>
+    Cantos instrumentos tocas?
+    <br>
+    <input type="number"  min="1" max="5" step="1"/>
+    <br/>
+    Preséntate engadindo os teus instrumentos
+    <br/>
+    <textarea id="presentacion" name="presentacion" cols="50" rows="7" 
+    placeholder="Boas son Xose Ramón Gayoso e toco a gaita pola noite" ></textarea>
+    <br/>
+    Engade o enlace a unha rede social
+    <br>
+    <input type="url" placeholder="http:..."/>
+    <br>
+    Sala de ensaio de preferencia
+    <br/>
+    <select id="Sala de preferencia" name="Sala">
+        <option value="Sala 1">Sala 1</option>
+        <option value="Sala 2">Sala 2</option>
+        <option value="Sala 3">Sala 3</option>
+        <option value="Sala 4">Sala 4</option>
+    </select>
+    <br>
+    Hora de ensaio habitual
+    <br>
+    <input type="time" />
+    <br/>
+    Adxunta o teu DNI <br/>
+    <input type="file" name="DNI" /> <br/>
+    <br/>
+    <input type="submit" />
+    <input type="reset" name="reseteo">
+</form>
+</body>
