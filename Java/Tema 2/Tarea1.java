@@ -82,6 +82,11 @@ public class Tarea1{
         
         System.out.println(palComparada.compareToIgnoreCase(palabraFiltro));
 
+        int i , x;
+
+        for (i = 0; i < arrayPalabras.length; i++) {
+            x = arrayPalabras[i];
+        }
 
 
         // Temporal,borrar
@@ -104,7 +109,7 @@ public class Tarea1{
 
 
 
-    
+
 
 
     public static void main(String[] args) {
