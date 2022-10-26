@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Ej{
+public class Tarea1{
 
 
     public static String solicitaInput(){
