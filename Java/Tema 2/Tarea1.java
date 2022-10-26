@@ -23,15 +23,16 @@
 // la palabra introducida por el usuario, la segunda lista constará de las palabras
 // lexicográficamente iguales y posteriores.
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Tarea1{
+public class Ej{
 
 
     public static String solicitaInput(){
         System.out.println("...");
-        String inputUsuario = System.console().readLine();
+        String inputUsuario = (System.console().readLine()).toLowerCase();
         return inputUsuario;
     }
 
@@ -56,57 +57,61 @@ public class Tarea1{
     }
 
 
+    // Este metodo itera sobre el array de palabras e comprobando si comienzan por la palabra filtro. Si es así
+    // imprime por pantalla el elemento del array.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public static String filtrar(String[] arrayPalabras){
+    public static void filtrar(String[] arrayPalabras){
         System.out.println("Introduce una palabra para filtrar resultados.");
         System.out.println("Se te mostrarán palabras que empiecen por esos caracteres o por esa palabra");
 
         String palComparada;
         String palabraFiltro = solicitaInput();
-        int valorComp;
-        String[] resultados;
-        
-        System.out.println(palComparada.compareToIgnoreCase(palabraFiltro));
+                
+        int contador ;
 
-        int i , x;
+        for (contador = 0; contador < arrayPalabras.length; contador++) 
+        {
+            palComparada = arrayPalabras[contador];
 
-        for (i = 0; i < arrayPalabras.length; i++) {
-            x = arrayPalabras[i];
+            if (palComparada.startsWith(palabraFiltro)) {
+                System.out.println(palComparada);
+            }
         }
-
-
-        // Temporal,borrar
-        return palabraFiltro;
     }
 
 
+    public static void dividir(String[] arrayPalabras){
+
+        System.out.println("Introduce una palabra para comprobar las anteriores y posteriores lexicográficamente");
+        String palDivisora = solicitaInput();
+        List<String> palAnteriores = new ArrayList<>();
+        List<String> palPosteriores = new ArrayList<>();
+        int contador;
+
+        for (contador = 0; contador < arrayPalabras.length; contador++) 
+        {
+            if ((arrayPalabras[contador].compareTo(palDivisora)) < 0) {
+                palAnteriores.add(arrayPalabras[contador]);
+            }
+            if ((arrayPalabras[contador].compareTo(palDivisora)) >= 0) {
+                palPosteriores.add(arrayPalabras[contador]);
+            }
+        }
 
 
+        System.out.println("---------------------------------------------");
+        System.out.println("<PALABRAS ANTERIORES>");
+        System.out.println(palAnteriores.toString());
+        System.out.println("---------------------------------------------");
+        System.out.println("<TU PALABRA>");
+        System.out.println(palDivisora);
+        System.out.println("---------------------------------------------");
+        System.out.println("<PALABRAS POSTERIORES>");
+        System.out.println(palPosteriores.toString());
+        System.out.println("---------------------------------------------");
 
 
-
-
-
-
-
-
-
-
-
+    }
 
 
 
@@ -117,7 +122,8 @@ public class Tarea1{
         System.out.println("Escribe tu lista de palabras separadas por comas.");
         String []arrayPalabras = conversorArray();
 
-        System.out.println("Escoge el siguiente procedimiento 1 Filtrar o 2 Dividir y ordenar (Escribe un número)");
+        System.out.println("Escoge el siguiente procedimiento 1 Filtrar o 2 Dividir y ordenar (Escribe un número).");
+        System.out.println("Introduce 3 para salir del programa");
 
         int respuestaUsuario;
 
@@ -128,10 +134,12 @@ public class Tarea1{
             if (respuestaUsuario == 1) {
                 filtrar(arrayPalabras);
             }
-        
-
-
-        
+            if (respuestaUsuario == 2) {
+                dividir(arrayPalabras);
+            }
+            if (respuestaUsuario == 3) {
+                System.exit(0);;
+            }
 
     }
 }
