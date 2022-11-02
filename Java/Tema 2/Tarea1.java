@@ -138,7 +138,7 @@ public class Tarea1{
                 dividir(arrayPalabras);
             }
             if (respuestaUsuario == 3) {
-                System.exit(0);;
+                System.exit(0);
             }
 
     }
