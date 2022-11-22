@@ -109,6 +109,11 @@ hr {
   background-color: black;
 }
 
+.gifaudio{
+  filter: invert();
+  display: none;
+}
+
 .contacto1 {
   display: flex;
   justify-content: space-around;

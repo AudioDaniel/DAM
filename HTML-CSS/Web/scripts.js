@@ -28,3 +28,15 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
+
+function gifPlay() {
+  // var gif = document.getElementsByClassName("gifaudio");
+  const gifAudio = document.querySelector(".gifaudio");
+  gifAudio.style.display = "flex";
+}
+
+function gifPause() {
+  // var gif = document.getElementsByClassName("gifaudio");
+  const gifAudio = document.querySelector(".gifaudio");
+  gifAudio.style.display = "none";
+}

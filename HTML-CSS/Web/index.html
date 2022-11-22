@@ -49,15 +49,16 @@
                 <br>
                 <br>
                 Estilo Jazz - Big Band
-                <audio controls>
+                <audio onplay="gifPlay()" onpause="gifPause()" controls>
                     <source src="mp3/BigBandMix.mp3" type="audio/mp3">
                 </audio>
                 <br>
                 <br>
                 Estilo Heavy Metal moderno
-                <audio controls>
+                <audio onplay="gifPlay()" onpause="gifPause()" controls>
                     <source src="mp3/MetalMix.mp3" type="audio/mp3">
                 </audio>
+                <img src="img/playergif.gif" class="gifaudio" width="250">
             </p>
         </aside>
         <section>
@@ -78,6 +79,8 @@
     </div>
 
     <footer>Daniel M. Vázquez - Técnico de sonido</footer>
+
+    <script src="scripts.js"></script>
 
 </body>
 
